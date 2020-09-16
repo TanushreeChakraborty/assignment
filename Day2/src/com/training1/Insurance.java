@@ -4,8 +4,8 @@ public class Insurance {
 
 	private int policyNumber;
 	private String policyHolderName;
-	private int policyHolderAge;
-	private double insuredAmount;
+	int policyHolderAge;
+	double insuredAmount;
 	public Insurance() {
 		super();
 		// TODO Auto-generated constructor stub
@@ -44,7 +44,17 @@ public class Insurance {
 		this.policyHolderAge = policyHolderAge;
 	}
 	
-	public double calculatePremium(int policyHolderAge,double insuredAmount) {
+	
+	
+	public double getInsuredAmount() {
+		return insuredAmount;
+	}
+
+	public void setInsuredAmount(double insuredAmount) {
+		this.insuredAmount = insuredAmount;
+	}
+
+	public double calculatePremium() {
 		
 		double premium;
 		if(policyHolderAge<25)
