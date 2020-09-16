@@ -1,12 +1,26 @@
 package com.training1;
 
-public class Product {
+public class Product extends Object {
  
 	private int prodId;
 	private String prodName;
 	 private double ratePerUnit;
 	 private int productType;
- public Product() {
+	 private int quantity;
+	 private double discount;
+ 
+	 public Product(int prodId, String prodName, double ratePerUnit, int productType, int quantity, double discount) {
+		super();
+		this.prodId = prodId;
+		this.prodName = prodName;
+		this.ratePerUnit = ratePerUnit;
+		this.productType = productType;
+		this.quantity = quantity;
+		this.discount = discount;
+	}
+
+
+public Product() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
@@ -47,5 +61,20 @@ public void setProductType(int productType) {
 }
  
  
+public double getDiscount() {
+	return discount;
+}
+public void setDiscount(double discount) {
+	this.discount = discount;
+}
+
+
+@Override
+	public String toString() {
+	// TODO Auto-generated method stub
+	return this.prodName+":"+this.ratePerUnit;
+}
+ 
+
 
 }
